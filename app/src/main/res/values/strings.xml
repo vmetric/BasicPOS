@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">BasicPOS</string>
+    <string name="button1_Text">Hotdog</string>
+    <string name="button2_Text">Nachos</string>
+    <string name="button3_Text">Candy</string>
+    <string name="button4_Text">Gatorade</string>
+    <string name="button5_Text">Dill pickle</string>
+    <string name="button6_Text">Small Soda</string>
+    <string name="button7_Text">Large Soda</string>
+    <string name="button8_Text">Water</string>
+    <string name="button9_Text">Pizza</string>
+    <string name="button10_Text">Popcorn</string>
+    <string name="button11_Text"></string>
+    <string name="button12_Text"></string>
+    <string name="button13_Text"></string>
+    <string name="button14_Text"></string>
+    <string name="button15_Text"></string>
 </resources>
