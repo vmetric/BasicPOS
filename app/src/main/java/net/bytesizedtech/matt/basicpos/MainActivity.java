@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView display;
-    double runningTotal;
+    Double runningTotal;
     ArrayList<Double> prices = new ArrayList<Double>(15){
         {
             add(1.21);
@@ -166,6 +166,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
     private void updateDisplay() {
-        display.setText(Double.toString(runningTotal));
+        display.setText(String.format(Double.toString((double)Math.round(runningTotal * 100d) / 100d
+                )));
     }
 }
