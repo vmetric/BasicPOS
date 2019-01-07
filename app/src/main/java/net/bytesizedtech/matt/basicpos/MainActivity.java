@@ -3,6 +3,7 @@ package net.bytesizedtech.matt.basicpos;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -12,6 +13,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button button1 = findViewById(R.id.button1);
+        button1.setOnClickListener(this);
+        Button button2 = findViewById(R.id.button1);
+        button2.setOnClickListener(this);
+        Button button3 = findViewById(R.id.button1);
+        button3.setOnClickListener(this);
+        Button button4 = findViewById(R.id.button1);
+        button4.setOnClickListener(this);
+        Button button5 = findViewById(R.id.button1);
+        button5.setOnClickListener(this);
+        Button button6 = findViewById(R.id.button1);
+        button6.setOnClickListener(this);
+        Button button7 = findViewById(R.id.button1);
+        button7.setOnClickListener(this);
+        Button button8 = findViewById(R.id.button1);
+        button8.setOnClickListener(this);
+        Button button9 = findViewById(R.id.button1);
+        button9.setOnClickListener(this);
+        Button button10 = findViewById(R.id.button1);
+        button10.setOnClickListener(this);
+        Button button11 = findViewById(R.id.button1);
+        button11.setOnClickListener(this);
+        Button button12 = findViewById(R.id.button1);
+        button12.setOnClickListener(this);
+        Button button13 = findViewById(R.id.button1);
+        button13.setOnClickListener(this);
+        Button button14 = findViewById(R.id.button1);
+        button14.setOnClickListener(this);
+        Button button15 = findViewById(R.id.button1);
+        button15.setOnClickListener(this);
 
         ArrayList<Double> prices = new ArrayList<Double>(15){
             {
@@ -36,12 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
     public void onClick(View v) {
-        // default method for handling onClick Events..
+
     }
 }
