@@ -23,11 +23,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             add(3.00);
             add(2.21);
             add(3.32);
-            add(5.75);
-            add(15.00);
-            add(25.00);
-            add(12.42);
-            add(9.12);
+            add(0.0);
+            add(0.0);
+            add(0.0);
+            add(0.0);
+            add(0.0);
         }
     };
 
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         display = findViewById(R.id.display);
+        display.setText("$0.0");
         runningTotal = 0.0;
 
         Button button1 = findViewById(R.id.button1);
@@ -166,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
     private void updateDisplay() {
-        display.setText(String.format(Double.toString((double)Math.round(runningTotal * 100d) / 100d
+        display.setText("$" + String.format(Double.toString((double)Math.round(runningTotal * 100d) / 100d
                 )));
     }
 }
