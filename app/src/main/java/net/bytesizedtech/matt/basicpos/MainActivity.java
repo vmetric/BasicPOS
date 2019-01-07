@@ -4,10 +4,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    TextView display = findViewById(R.id.display);
+    double runningTotal = 0;
+    ArrayList<Double> prices = new ArrayList<Double>(15){
+        {
+            add(1.21);
+            add(2.20);
+            add(3.10);
+            add(2.75);
+            add(8.75);
+            add(5.00);
+            add(1.00);
+            add(3.00);
+            add(2.21);
+            add(3.32);
+            add(5.75);
+            add(15.00);
+            add(25.00);
+            add(12.42);
+            add(9.12);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,30 +67,95 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button15 = findViewById(R.id.button1);
         button15.setOnClickListener(this);
 
-        ArrayList<Double> prices = new ArrayList<Double>(15){
-            {
-            add(1.21);
-            add(2.20);
-            add(3.10);
-            add(2.75);
-            add(8.75);
-            add(5.00);
-            add(1.00);
-            add(3.00);
-            add(2.21);
-            add(3.32);
-            add(5.75);
-            add(15.00);
-            add(25.00);
-            add(12.42);
-            add(9.12);
-            }
-        };
+
 
 
     }
     @Override
     public void onClick(View v) {
 
+        switch (v.getId()){
+            case R.id.button1:
+                runningTotal = runningTotal + prices.get(1);
+                updateDisplay();
+            break;
+
+            case R.id.button2:
+                runningTotal = runningTotal + prices.get(2);
+                updateDisplay();
+            break;
+
+            case R.id.button3:
+                runningTotal = runningTotal + prices.get(3);
+                updateDisplay();
+            break;
+
+            case R.id.button4:
+                runningTotal = runningTotal + prices.get(4);
+                updateDisplay();
+            break;
+
+            case R.id.button5:
+                runningTotal = runningTotal + prices.get(5);
+                updateDisplay();
+            break;
+
+            case R.id.button6:
+                runningTotal = runningTotal + prices.get(6);
+                updateDisplay();
+            break;
+
+            case R.id.button7:
+                runningTotal = runningTotal + prices.get(7);
+                updateDisplay();
+                break;
+
+            case R.id.button8:
+                runningTotal = runningTotal + prices.get(8);
+                updateDisplay();
+                break;
+
+            case R.id.button9:
+                runningTotal = runningTotal + prices.get(9);
+                updateDisplay();
+                break;
+
+            case R.id.button10:
+                runningTotal = runningTotal + prices.get(10);
+                updateDisplay();
+                break;
+
+            case R.id.button11:
+                runningTotal = runningTotal + prices.get(11);
+                updateDisplay();
+                break;
+
+            case R.id.button12:
+                runningTotal = runningTotal + prices.get(12);
+                updateDisplay();
+                break;
+
+            case R.id.button13:
+                runningTotal = runningTotal + prices.get(13);
+                updateDisplay();
+                break;
+
+            case R.id.button14:
+                runningTotal = runningTotal + prices.get(14);
+                updateDisplay();
+                break;
+
+            case R.id.button15:
+                runningTotal = runningTotal + prices.get(15);
+                updateDisplay();
+                break;
+
+
+
+
+        }
+    }
+    private void updateDisplay() {
+        display.setText(Double.toString(runningTotal));
     }
 }
