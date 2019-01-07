@@ -15,4 +15,6 @@
     <string name="button13_Text"></string>
     <string name="button14_Text"></string>
     <string name="button15_Text"></string>
+    <string name="buttonClear">Clear</string>
+
 </resources>

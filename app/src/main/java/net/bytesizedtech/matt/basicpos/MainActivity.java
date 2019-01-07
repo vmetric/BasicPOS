@@ -66,6 +66,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button14.setOnClickListener(this);
         Button button15 = findViewById(R.id.button1);
         button15.setOnClickListener(this);
+        Button buttonClear = findViewById(R.id.buttonClear);
+        buttonClear.setOnClickListener(this);
 
 
 
@@ -78,32 +80,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button1:
                 runningTotal = runningTotal + prices.get(1);
                 updateDisplay();
-            break;
+                break;
 
             case R.id.button2:
                 runningTotal = runningTotal + prices.get(2);
                 updateDisplay();
-            break;
+                break;
 
             case R.id.button3:
                 runningTotal = runningTotal + prices.get(3);
                 updateDisplay();
-            break;
+                break;
 
             case R.id.button4:
                 runningTotal = runningTotal + prices.get(4);
                 updateDisplay();
-            break;
+                break;
 
             case R.id.button5:
                 runningTotal = runningTotal + prices.get(5);
                 updateDisplay();
-            break;
+                break;
 
             case R.id.button6:
                 runningTotal = runningTotal + prices.get(6);
                 updateDisplay();
-            break;
+                break;
 
             case R.id.button7:
                 runningTotal = runningTotal + prices.get(7);
@@ -147,6 +149,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.button15:
                 runningTotal = runningTotal + prices.get(15);
+                updateDisplay();
+                break;
+
+            case R.id.buttonClear:
+                runningTotal = 0.0;
                 updateDisplay();
                 break;
 
