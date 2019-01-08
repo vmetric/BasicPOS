@@ -2,14 +2,18 @@ package net.bytesizedtech.matt.basicpos;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView display;
+    TextView displayChange;
+    EditText amountPaid;
     Double runningTotal;
     ArrayList<Double> prices = new ArrayList<Double>(15){
         {
@@ -37,7 +41,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         display = findViewById(R.id.display);
+        displayChange = findViewById(R.id.displayChange);
+        amountPaid = findViewById(R.id.amountPaid);
+        amountPaid.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN)
+                {
+                    switch (keyCode)
+                    {
+                        case KeyEvent.KEYCODE_DPAD_CENTER:
+                        case KeyEvent.KEYCODE_ENTER:
+                            calcChange();
+                            return true;
+                        default:
+                            break;
+                    }
+                }
+                return false;
+            }
+        });
         display.setText("$0.0");
+        displayChange.setText("$0.0");
         runningTotal = 0.0;
 
         Button button1 = findViewById(R.id.button1);
@@ -72,9 +97,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button15.setOnClickListener(this);
         Button buttonClear = findViewById(R.id.buttonClear);
         buttonClear.setOnClickListener(this);
-
-
-
 
     }
     @Override
@@ -158,16 +180,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.buttonClear:
                 runningTotal = 0.0;
+                displayChange.setText("$0.0");
+                amountPaid.setText("");
                 updateDisplay();
                 break;
-
-
-
-
         }
     }
     private void updateDisplay() {
         display.setText("$" + String.format(Double.toString((double)Math.round(runningTotal * 100d) / 100d
                 )));
+    }
+    private void calcChange() {
+        displayChange.setText("$" + Double.toString((double)Math.round((Double.parseDouble(amountPaid.getText().toString()) - runningTotal) * 100d) / 100d));
     }
 }
