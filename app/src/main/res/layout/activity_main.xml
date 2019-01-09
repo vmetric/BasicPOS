@@ -243,4 +243,14 @@
         app:layout_constraintEnd_toStartOf="@+id/displayChange"
         app:layout_constraintTop_toTopOf="@+id/displayChange" />
 
+    <Button
+        android:id="@+id/buttonEditItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Edit Items"
+        app:layout_constraintBottom_toTopOf="@+id/buttonClear"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

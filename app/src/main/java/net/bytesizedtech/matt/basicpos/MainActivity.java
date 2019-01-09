@@ -1,5 +1,6 @@
 package net.bytesizedtech.matt.basicpos;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -97,8 +98,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button15.setOnClickListener(this);
         Button buttonClear = findViewById(R.id.buttonClear);
         buttonClear.setOnClickListener(this);
+        Button buttonEditItems = findViewById(R.id.buttonEditItems);
+        buttonEditItems.setOnClickListener(this);
 
     }
+
     @Override
     public void onClick(View v) {
 
@@ -184,6 +188,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 amountPaid.setText("");
                 updateDisplay();
                 break;
+            case R.id.buttonEditItems:
+                Intent intent = new Intent(this, ItemSetting.class);
+                startActivity(intent);
+                break;
+
         }
     }
     private void updateDisplay() {
