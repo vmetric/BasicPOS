@@ -16,7 +16,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView displayChange;
     EditText amountPaid;
     Double runningTotal;
-    ArrayList<Double> prices = new ArrayList<Double>(15){
+    public static Button button1;
+    public static Button button2;
+    public static Button button3;
+    public static Button button4;
+    public static Button button5;
+    public static Button button6;
+    public static Button button7;
+    public static Button button8;
+    public static Button button9;
+    public static Button button10;
+    public static Button button11;
+    public static Button button12;
+    public static Button button13;
+    public static Button button14;
+    public static Button button15;
+    public static ArrayList<Double> prices = new ArrayList<Double>(15){
         {
             add(1.21);
             add(2.20);
@@ -66,35 +81,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         displayChange.setText("$0.0");
         runningTotal = 0.0;
 
-        Button button1 = findViewById(R.id.button1);
+        button1 = findViewById(R.id.button1);
         button1.setOnClickListener(this);
-        Button button2 = findViewById(R.id.button2);
+        button2 = findViewById(R.id.button2);
         button2.setOnClickListener(this);
-        Button button3 = findViewById(R.id.button3);
+        button3 = findViewById(R.id.button3);
         button3.setOnClickListener(this);
-        Button button4 = findViewById(R.id.button4);
+        button4 = findViewById(R.id.button4);
         button4.setOnClickListener(this);
-        Button button5 = findViewById(R.id.button5);
+        button5 = findViewById(R.id.button5);
         button5.setOnClickListener(this);
-        Button button6 = findViewById(R.id.button6);
+        button6 = findViewById(R.id.button6);
         button6.setOnClickListener(this);
-        Button button7 = findViewById(R.id.button7);
+        button7 = findViewById(R.id.button7);
         button7.setOnClickListener(this);
-        Button button8 = findViewById(R.id.button8);
+        button8 = findViewById(R.id.button8);
         button8.setOnClickListener(this);
-        Button button9 = findViewById(R.id.button9);
+        button9 = findViewById(R.id.button9);
         button9.setOnClickListener(this);
-        Button button10 = findViewById(R.id.button10);
+        button10 = findViewById(R.id.button10);
         button10.setOnClickListener(this);
-        Button button11 = findViewById(R.id.button11);
+        button11 = findViewById(R.id.button11);
         button11.setOnClickListener(this);
-        Button button12 = findViewById(R.id.button12);
+        button12 = findViewById(R.id.button12);
         button12.setOnClickListener(this);
-        Button button13 = findViewById(R.id.button13);
+        button13 = findViewById(R.id.button13);
         button13.setOnClickListener(this);
-        Button button14 = findViewById(R.id.button14);
+        button14 = findViewById(R.id.button14);
         button14.setOnClickListener(this);
-        Button button15 = findViewById(R.id.button15);
+        button15 = findViewById(R.id.button15);
         button15.setOnClickListener(this);
         Button buttonClear = findViewById(R.id.buttonClear);
         buttonClear.setOnClickListener(this);
@@ -201,5 +216,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     private void calcChange() {
         displayChange.setText("$" + Double.toString((double)Math.round((Double.parseDouble(amountPaid.getText().toString()) - runningTotal) * 100d) / 100d));
+    }
+    public static void changeButtonText(Button button, String text) {
+        button.setText(text);
+        button.setText("moo");
     }
 }
