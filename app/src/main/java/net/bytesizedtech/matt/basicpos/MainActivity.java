@@ -227,7 +227,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void calcChange() {
         displayChange.setText("$" + Double.toString((double)Math.round((Double.parseDouble(amountPaid.getText().toString()) - runningTotal) * 100d) / 100d));
     }
-    public void changeButtonText(String text) {
-        button1.setText(text);
-        }
 }
