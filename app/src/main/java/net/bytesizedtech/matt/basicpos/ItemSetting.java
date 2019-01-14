@@ -42,6 +42,7 @@ public class ItemSetting extends AppCompatActivity implements AdapterView.OnItem
         ArrayAdapter<Integer> dataAdapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_item, spinnerList);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(dataAdapter);
+        spinner.setPrompt("Select button to change");
 
         buttonUpdate.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

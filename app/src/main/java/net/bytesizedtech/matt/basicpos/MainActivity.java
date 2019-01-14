@@ -33,40 +33,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static Button button15;
     public static ArrayList<Double> prices = new ArrayList<Double>(15){
         {
-            add(1.21);
-            add(2.20);
-            add(3.10);
-            add(2.75);
-            add(8.75);
-            add(5.00);
-            add(1.00);
-            add(3.00);
-            add(2.21);
-            add(3.32);
-            add(0.0);
-            add(0.0);
-            add(0.0);
-            add(0.0);
-            add(0.0);
+            for (int i = 0; i < 15; i++) {
+                add(0.0);
+            }
         }
     };
     public static ArrayList<String> buttonLabels = new ArrayList<String>(15) {
         {
-            add("Hotdog");
-            add("Nachos");
-            add("Cnady");
-            add("Gatorade");
-            add("Dill pickle");
-            add("Small soda");
-            add("Large soda");
-            add("Water");
-            add("Pizza");
-            add("Popcorn");
-            add("");
-            add("");
-            add("");
-            add("");
-            add("");
+            for (int i = 0; i < 15; i++) {
+                add("");
+            }
         }
 
     };
