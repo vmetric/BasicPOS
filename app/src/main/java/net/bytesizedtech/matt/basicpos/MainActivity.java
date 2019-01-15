@@ -10,12 +10,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView display;
     TextView displayChange;
     EditText amountPaid;
     Double runningTotal;
+    // ArrayList of buttons?
     public static Button button1;
     public static Button button2;
     public static Button button3;
@@ -31,6 +36,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static Button button13;
     public static Button button14;
     public static Button button15;
+    public static ArrayList<View> buttons = new ArrayList<View>(14) {
+        {
+            for (int i = 1; i <= 15; i++) {
+                Button button;
+            }
+        }
+    };
     public static ArrayList<Double> prices = new ArrayList<Double>(15){
         {
             for (int i = 0; i < 15; i++) {
@@ -51,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         display = findViewById(R.id.display);
         displayChange = findViewById(R.id.displayChange);
         amountPaid = findViewById(R.id.amountPaid);

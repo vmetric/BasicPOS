@@ -74,77 +74,77 @@ public class ItemSetting extends AppCompatActivity implements AdapterView.OnItem
         switch (spinner.getSelectedItemPosition() + 1) {
             case 1:
                 selectedButton = 1;
-                textViewCurrentItem.setText(MainActivity.button1.getText());
+                textViewCurrentItem.setText(MainActivity.buttonLabels.get(0));
                 textViewCurrentPrice.setText(MainActivity.prices.get(0).toString());
                 break;
             case 2:
                 selectedButton = 2;
-                textViewCurrentItem.setText(MainActivity.button2.getText());
+                textViewCurrentItem.setText(MainActivity.buttonLabels.get(1));
                 textViewCurrentPrice.setText(MainActivity.prices.get(1).toString());
                 break;
             case 3:
                 selectedButton = 3;
-                textViewCurrentItem.setText(MainActivity.button3.getText());
+                textViewCurrentItem.setText(MainActivity.buttonLabels.get(2));
                 textViewCurrentPrice.setText(MainActivity.prices.get(2).toString());
                 break;
             case 4:
                 selectedButton = 4;
-                textViewCurrentItem.setText(MainActivity.button4.getText());
+                textViewCurrentItem.setText(MainActivity.buttonLabels.get(3));
                 textViewCurrentPrice.setText(MainActivity.prices.get(3).toString());
                 break;
             case 5:
                 selectedButton = 5;
-                textViewCurrentItem.setText(MainActivity.button5.getText());
+                textViewCurrentItem.setText(MainActivity.buttonLabels.get(4));
                 textViewCurrentPrice.setText(MainActivity.prices.get(4).toString());
                 break;
             case 6:
                 selectedButton = 6;
-                textViewCurrentItem.setText(MainActivity.button6.getText());
+                textViewCurrentItem.setText(MainActivity.buttonLabels.get(5));
                 textViewCurrentPrice.setText(MainActivity.prices.get(5).toString());
                 break;
             case 7:
                 selectedButton = 7;
-                textViewCurrentItem.setText(MainActivity.button7.getText());
+                textViewCurrentItem.setText(MainActivity.buttonLabels.get(6));
                 textViewCurrentPrice.setText(MainActivity.prices.get(6).toString());
                 break;
             case 8:
                 selectedButton = 8;
-                textViewCurrentItem.setText(MainActivity.button8.getText());
+                textViewCurrentItem.setText(MainActivity.buttonLabels.get(7));
                 textViewCurrentPrice.setText(MainActivity.prices.get(7).toString());
                 break;
             case 9:
                 selectedButton = 9;
-                textViewCurrentItem.setText(MainActivity.button9.getText());
+                textViewCurrentItem.setText(MainActivity.buttonLabels.get(8));
                 textViewCurrentPrice.setText(MainActivity.prices.get(8).toString());
                 break;
             case 10:
                 selectedButton = 10;
-                textViewCurrentItem.setText(MainActivity.button10.getText());
+                textViewCurrentItem.setText(MainActivity.buttonLabels.get(9));
                 textViewCurrentPrice.setText(MainActivity.prices.get(9).toString());
                 break;
             case 11:
                 selectedButton = 11;
-                textViewCurrentItem.setText(MainActivity.button11.getText());
+                textViewCurrentItem.setText(MainActivity.buttonLabels.get(10));
                 textViewCurrentPrice.setText(MainActivity.prices.get(10).toString());
                 break;
             case 12:
                 selectedButton = 12;
-                textViewCurrentItem.setText(MainActivity.button12.getText());
+                textViewCurrentItem.setText(MainActivity.buttonLabels.get(11));
                 textViewCurrentPrice.setText(MainActivity.prices.get(11).toString());
                 break;
             case 13:
                 selectedButton = 13;
-                textViewCurrentItem.setText(MainActivity.button13.getText());
+                textViewCurrentItem.setText(MainActivity.buttonLabels.get(12));
                 textViewCurrentPrice.setText(MainActivity.prices.get(12).toString());
                 break;
             case 14:
                 selectedButton = 14;
-                textViewCurrentItem.setText(MainActivity.button14.getText());
+                textViewCurrentItem.setText(MainActivity.buttonLabels.get(13));
                 textViewCurrentPrice.setText(MainActivity.prices.get(13).toString());
                 break;
             case 15:
                 selectedButton = 15;
-                textViewCurrentItem.setText(MainActivity.button15.getText());
+                textViewCurrentItem.setText(MainActivity.buttonLabels.get(14));
                 textViewCurrentPrice.setText(MainActivity.prices.get(14).toString());
                 break;
         }
