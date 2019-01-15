@@ -20,29 +20,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView displayChange;
     EditText amountPaid;
     Double runningTotal;
-    // ArrayList of buttons?
-    public static Button button1;
-    public static Button button2;
-    public static Button button3;
-    public static Button button4;
-    public static Button button5;
-    public static Button button6;
-    public static Button button7;
-    public static Button button8;
-    public static Button button9;
-    public static Button button10;
-    public static Button button11;
-    public static Button button12;
-    public static Button button13;
-    public static Button button14;
-    public static Button button15;
-    public static ArrayList<View> buttons = new ArrayList<View>(14) {
-        {
-            for (int i = 1; i <= 15; i++) {
-                Button button;
-            }
-        }
-    };
     public static ArrayList<Double> prices = new ArrayList<Double>(15){
         {
             for (int i = 0; i < 15; i++) {
@@ -84,59 +61,69 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return false;
             }
         });
-        display.setText("$0.0");
-        displayChange.setText("$0.0");
-        runningTotal = 0.0;
 
-        button1 = findViewById(R.id.button1);
-        button1.setOnClickListener(this);
-        button1.setText(buttonLabels.get(0));
-        button2 = findViewById(R.id.button2);
-        button2.setOnClickListener(this);
-        button2.setText(buttonLabels.get(1));
-        button3 = findViewById(R.id.button3);
-        button3.setOnClickListener(this);
-        button3.setText(buttonLabels.get(2));
-        button4 = findViewById(R.id.button4);
-        button4.setOnClickListener(this);
-        button4.setText(buttonLabels.get(3));
-        button5 = findViewById(R.id.button5);
-        button5.setOnClickListener(this);
-        button5.setText(buttonLabels.get(4));
-        button6 = findViewById(R.id.button6);
-        button6.setOnClickListener(this);
-        button6.setText(buttonLabels.get(5));
-        button7 = findViewById(R.id.button7);
-        button7.setOnClickListener(this);
-        button7.setText(buttonLabels.get(6));
-        button8 = findViewById(R.id.button8);
-        button8.setOnClickListener(this);
-        button8.setText(buttonLabels.get(7));
-        button9 = findViewById(R.id.button9);
-        button9.setOnClickListener(this);
-        button9.setText(buttonLabels.get(8));
-        button10 = findViewById(R.id.button10);
-        button10.setOnClickListener(this);
-        button10.setText(buttonLabels.get(9));
-        button11 = findViewById(R.id.button11);
-        button11.setOnClickListener(this);
-        button11.setText(buttonLabels.get(10));
-        button12 = findViewById(R.id.button12);
-        button12.setOnClickListener(this);
-        button12.setText(buttonLabels.get(11));
-        button13 = findViewById(R.id.button13);
-        button13.setOnClickListener(this);
-        button13.setText(buttonLabels.get(12));
-        button14 = findViewById(R.id.button14);
-        button14.setOnClickListener(this);
-        button14.setText(buttonLabels.get(13));
-        button15 = findViewById(R.id.button15);
-        button15.setOnClickListener(this);
-        button15.setText(buttonLabels.get(14));
+        ArrayList<Button> buttons = new ArrayList<Button>() {
+            {
+                Button button1;
+                Button button2;
+                Button button3;
+                Button button4;
+                Button button5;
+                Button button6;
+                Button button7;
+                Button button8;
+                Button button9;
+                Button button10;
+                Button button11;
+                Button button12;
+                Button button13;
+                Button button14;
+                Button button15;
+                button1 = findViewById(R.id.button1);
+                button1.setText(buttonLabels.get(0));
+                button2 = findViewById(R.id.button2);
+                button2.setText(buttonLabels.get(1));
+                button3 = findViewById(R.id.button3);
+                button3.setText(buttonLabels.get(2));
+                button4 = findViewById(R.id.button4);
+                button4.setText(buttonLabels.get(3));
+                button5 = findViewById(R.id.button5);
+                button5.setText(buttonLabels.get(4));
+                button6 = findViewById(R.id.button6);
+                button6.setText(buttonLabels.get(5));
+                button7 = findViewById(R.id.button7);
+                button7.setText(buttonLabels.get(6));
+                button8 = findViewById(R.id.button8);
+                button8.setText(buttonLabels.get(7));
+                button9 = findViewById(R.id.button9);
+                button9.setText(buttonLabels.get(8));
+                button10 = findViewById(R.id.button10);
+                button10.setText(buttonLabels.get(9));
+                button11 = findViewById(R.id.button11);
+                button11.setText(buttonLabels.get(10));
+                button12 = findViewById(R.id.button12);
+                button12.setText(buttonLabels.get(11));
+                button13 = findViewById(R.id.button13);
+                button13.setText(buttonLabels.get(12));
+                button14 = findViewById(R.id.button14);
+                button14.setText(buttonLabels.get(13));
+                button15 = findViewById(R.id.button15);
+                button15.setText(buttonLabels.get(14));
+
+            }
+        };
+        for (Button button : buttons) {
+            button.setOnClickListener(this);
+        }
         Button buttonClear = findViewById(R.id.buttonClear);
         buttonClear.setOnClickListener(this);
         Button buttonEditItems = findViewById(R.id.buttonEditItems);
         buttonEditItems.setOnClickListener(this);
+        display.setText("$0.0");
+        displayChange.setText("$0.0");
+        runningTotal = 0.0;
+
+
     }
 
     @Override
