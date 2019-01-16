@@ -131,85 +131,70 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()){
             case R.id.button1:
-                runningTotal = runningTotal + prices.get(0);
-                updateDisplay();
+                updateDisplay(0);
                 break;
 
             case R.id.button2:
-                runningTotal = runningTotal + prices.get(1);
-                updateDisplay();
+                updateDisplay(1);
                 break;
 
             case R.id.button3:
-                runningTotal = runningTotal + prices.get(2);
-                updateDisplay();
+                updateDisplay(2);
                 break;
 
             case R.id.button4:
-                runningTotal = runningTotal + prices.get(3);
-                updateDisplay();
+                updateDisplay(3);
                 break;
 
             case R.id.button5:
-                runningTotal = runningTotal + prices.get(4);
-                updateDisplay();
+                updateDisplay(4);
                 break;
 
             case R.id.button6:
-                runningTotal = runningTotal + prices.get(5);
-                updateDisplay();
+                updateDisplay(5);
                 break;
 
             case R.id.button7:
-                runningTotal = runningTotal + prices.get(6);
-                updateDisplay();
+                updateDisplay(6);
                 break;
 
             case R.id.button8:
-                runningTotal = runningTotal + prices.get(7);
-                updateDisplay();
+                updateDisplay(7);
                 break;
 
             case R.id.button9:
-                runningTotal = runningTotal + prices.get(8);
-                updateDisplay();
+                updateDisplay(8);
                 break;
 
             case R.id.button10:
-                runningTotal = runningTotal + prices.get(9);
-                updateDisplay();
+                updateDisplay(9);
                 break;
 
             case R.id.button11:
-                runningTotal = runningTotal + prices.get(10);
-                updateDisplay();
+                updateDisplay(10);
                 break;
 
             case R.id.button12:
-                runningTotal = runningTotal + prices.get(11);
-                updateDisplay();
+                updateDisplay(11);
                 break;
 
             case R.id.button13:
-                runningTotal = runningTotal + prices.get(12);
-                updateDisplay();
+                updateDisplay(12);
                 break;
 
             case R.id.button14:
-                runningTotal = runningTotal + prices.get(13);
-                updateDisplay();
+                updateDisplay(13);
                 break;
 
             case R.id.button15:
-                runningTotal = runningTotal + prices.get(14);
-                updateDisplay();
+                updateDisplay(14);
                 break;
 
             case R.id.buttonClear:
                 runningTotal = 0.0;
                 displayChange.setText("$0.0");
                 amountPaid.setText("");
-                updateDisplay();
+                updateDisplay(-1);
                 break;
             case R.id.buttonEditItems:
                 Intent intent = new Intent(this, ItemSetting.class);
@@ -218,7 +203,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
     }
-    private void updateDisplay() {
+    private void updateDisplay(int indexOfPrice) {
+        if (indexOfPrice != -1) {
+            runningTotal = runningTotal + prices.get(indexOfPrice);
+        }
         display.setText("$" + String.format(Double.toString((double)Math.round(runningTotal * 100d) / 100d
                 )));
     }
