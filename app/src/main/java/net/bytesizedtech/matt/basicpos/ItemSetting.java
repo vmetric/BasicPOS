@@ -47,15 +47,12 @@ public class ItemSetting extends AppCompatActivity implements AdapterView.OnItem
         buttonUpdate.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (editTextItemName.getText().toString() == "") {
-                    //Show message "please enter valid item name"
                     Toast.makeText(getApplicationContext(), "Please enter a valid item name", Toast.LENGTH_SHORT).show();
 
                 } else if (editTextPrice.getText().toString() == "") {
-                    //"Please enter valid decimal for item price"
                     Toast.makeText(getApplicationContext(), "Please enter a valid item price (decimal)", Toast.LENGTH_SHORT).show();
 
                 } else if (1==2){
-                    //"Please select a button"
                     Toast.makeText(getApplicationContext(), "Please select a button", Toast.LENGTH_SHORT).show();
 
                 } else {
