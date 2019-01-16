@@ -17,9 +17,9 @@ import java.util.List;
 import java.util.ListIterator;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    EditText amountPaid;
     TextView display;
     TextView displayChange;
-    EditText amountPaid;
     Double runningTotal;
 
     public static ArrayList<Double> prices = new ArrayList<Double>(15){
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Button button1 = findViewById(R.id.button1);
         Button button2 = findViewById(R.id.button2);
         Button button3 = findViewById(R.id.button3);
@@ -57,12 +58,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button14 = findViewById(R.id.button14);
         Button button15 = findViewById(R.id.button15);
         Button buttonClear = findViewById(R.id.buttonClear);
-        buttonClear.setOnClickListener(this);
         Button buttonEditItems = findViewById(R.id.buttonEditItems);
-        buttonEditItems.setOnClickListener(this);
+
         display = findViewById(R.id.display);
         displayChange = findViewById(R.id.displayChange);
         amountPaid = findViewById(R.id.amountPaid);
+
+        button1.setOnClickListener(this);
+        button2.setOnClickListener(this);
+        button3.setOnClickListener(this);
+        button4.setOnClickListener(this);
+        button5.setOnClickListener(this);
+        button6.setOnClickListener(this);
+        button7.setOnClickListener(this);
+        button8.setOnClickListener(this);
+        button9.setOnClickListener(this);
+        button10.setOnClickListener(this);
+        button11.setOnClickListener(this);
+        button12.setOnClickListener(this);
+        button13.setOnClickListener(this);
+        button14.setOnClickListener(this);
+        button15.setOnClickListener(this);
+        buttonClear.setOnClickListener(this);
+        buttonEditItems.setOnClickListener(this);
+
+        button1.setText(buttonLabels.get(0));
+        button2.setText(buttonLabels.get(1));
+        button3.setText(buttonLabels.get(2));
+        button4.setText(buttonLabels.get(3));
+        button5.setText(buttonLabels.get(4));
+        button6.setText(buttonLabels.get(5));
+        button7.setText(buttonLabels.get(6));
+        button8.setText(buttonLabels.get(7));
+        button9.setText(buttonLabels.get(8));
+        button10.setText(buttonLabels.get(9));
+        button11.setText(buttonLabels.get(10));
+        button12.setText(buttonLabels.get(11));
+        button13.setText(buttonLabels.get(12));
+        button14.setText(buttonLabels.get(13));
+        button15.setText(buttonLabels.get(14));
+
         amountPaid.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
@@ -81,51 +116,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return false;
             }
         });
-        button1.setOnClickListener(this);
-        button1.setText(buttonLabels.get(0));
-
-        button2.setOnClickListener(this);
-        button2.setText(buttonLabels.get(1));
-
-        button3.setOnClickListener(this);
-        button3.setText(buttonLabels.get(2));
-        button4.setOnClickListener(this);
-        button4.setText(buttonLabels.get(3));
-
-        button5.setOnClickListener(this);
-        button5.setText(buttonLabels.get(4));
-
-        button6.setOnClickListener(this);
-        button6.setText(buttonLabels.get(5));
-
-        button7.setOnClickListener(this);
-        button7.setText(buttonLabels.get(6));
-
-        button8.setOnClickListener(this);
-        button8.setText(buttonLabels.get(7));
-
-        button9.setOnClickListener(this);
-        button9.setText(buttonLabels.get(8));
-
-        button10.setOnClickListener(this);
-        button10.setText(buttonLabels.get(9));
-
-        button11.setOnClickListener(this);
-        button11.setText(buttonLabels.get(10));
-
-        button12.setOnClickListener(this);
-        button12.setText(buttonLabels.get(11));
-
-        button13.setOnClickListener(this);
-        button13.setText(buttonLabels.get(12));
-
-        button14.setOnClickListener(this);
-        button14.setText(buttonLabels.get(13));
-
-        button15.setOnClickListener(this);
-        button15.setText(buttonLabels.get(14));
-
-
+        
         display.setText("$0.0");
         displayChange.setText("$0.0");
         runningTotal = 0.0;
