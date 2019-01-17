@@ -55,9 +55,11 @@ public class ItemSetting extends AppCompatActivity implements AdapterView.OnItem
                     Toast.makeText(getApplicationContext(), "Please select a button", Toast.LENGTH_SHORT).show();
 
                 } else {
-                    Toast.makeText(getApplicationContext(), "Made it to else", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Price updated", Toast.LENGTH_SHORT).show();
                     MainActivity.prices.set(spinner.getSelectedItemPosition(), Double.parseDouble(editTextPrice.getText().toString()));
                     MainActivity.buttonLabels.set(selectedButton - 1, editTextItemName.getText().toString());
+                    textViewCurrentItem.setText(editTextItemName.getText().toString());
+                    textViewCurrentPrice.setText(Double.toString(Double.parseDouble(editTextPrice.getText().toString())));
                 }
                 }
             });
