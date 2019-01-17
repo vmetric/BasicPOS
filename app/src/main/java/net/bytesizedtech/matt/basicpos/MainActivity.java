@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return false;
             }
         });
-        
+
         display.setText("$0.0");
         displayChange.setText("$0.0");
         runningTotal = 0.0;
